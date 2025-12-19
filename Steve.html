@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steve - Stranger Things</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #111;
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('steve.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding-bottom: 50px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-family: 'Creepster', cursive;
+            color: #f8810b; 
+            font-size: 60px;
+            text-shadow: 0 0 15px #d2870e, 0 0 30px #ac9617;
+            letter-spacing: 5px;
+            margin-bottom: 0;
+            animation: flicker 4s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; text-shadow: 0 0 10px #3b3b3c; }
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gorsel-alani {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+
+        .karakter-resmi {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 20px;
+            border: 4px solid #d99008;
+            box-shadow: 0 0 20px #e16c07;
+            transition: transform 0.8s ease, filter 0.5s;
+        }
+        
+        .karakter-resmi:hover {
+            transform: rotate(180deg) scale(1.05);
+            filter: hue-rotate(90deg);
+        }
+
+        .bilgi-alani {
+            flex: 1.5;
+            min-width: 300px;
+        }
+
+        .hikaye-kutusu {
+            background: rgba(10, 8, 6, 0.9);
+            border-left: 5px solid #f5ab0b; 
+            padding: 25px;
+            border-radius: 0 15px 15px 0;
+            line-height: 1.8;
+            font-size: 16px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .kunye-tablosu {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+
+        .kunye-tablosu td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ffffff;
+        }
+
+        .etiket {
+            font-weight: bold;
+            color: #ce9221;
+            width: 150px;
+        }
+
+
+        .geri-don-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 30px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            text-decoration: none;
+            font-family: 'Creepster', cursive;
+            font-size: 20px;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .geri-don-btn:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 20px white;
+        }
+
+        #muzikBtn {
+            position: fixed; 
+            top: 20px; 
+            right: 20px; 
+            z-index: 9999; 
+            cursor: pointer; 
+            background-color: rgba(0, 0, 0, 0.8); 
+            color: #ff0000; 
+            border: 2px solid #ff0000; 
+            padding: 10px 20px; 
+            border-radius: 30px; 
+            font-family: 'Creepster', cursive; 
+            font-size: 16px; 
+            box-shadow: 0 0 15px #8b0000;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="muzik" src="strangerthings.mp3" loop></audio>
+    <button id="muzikBtn" onclick="muzikKontrol()">🎵 Müzigi Oynat</button>
+
+    <header>
+        <h1>Steve Harrington</h1>
+        <p style="opacity: 0.8;">"She's only gonna break your heart, and you're way too young for that."</p>
+    </header>
+<br>
+    <div class="container">
+        
+        <div class="gorsel-alani">
+            <img src="resim/steve.jpg" class="karakter-resmi" alt="Eleven">
+            <p style="margin-top: 10px; font-size: 12px; color: #888;">(Döndürmek için üzerine gel)</p>
+        </div>
+
+        <div class="bilgi-alani">
+            <div class="hikaye-kutusu">
+                <p>
+                    Mike Wheeler, Hawkins’teki arkadaş grubunun (The Party) stratejik lideri ve "Dungeon Master"ı olarak hikayenin en kilit karakterlerinden biridir. En yakın arkadaşı Will Byers’ın kayboluşu sırasında gösterdiği kararlılık ve inanç, onu diğerlerinden ayıran en belirgin özelliğidir; yetişkinlerin bile çaresiz kaldığı durumlarda Mike umudunu asla yitirmemiş ve harekete geçmiştir. Bu süreçte ormanda bulduğu ve herkesten sakladığı Eleven ile kurduğu bağ, olayların seyrini tamamen değiştirmiştir. Eleven’a dünyayı tanıtan, ona güvenli bir liman olan ve "arkadaşların yalan söylemeyeceğini" öğreterek onun insani yönünü ortaya çıkaran ilk kişidir. Will tarafından grubun "kalbi" olarak tanımlanan Mike, sezonlar ilerledikçe ergenliğin getirdiği fevri çıkışlar ve duygusal karmaşalar yaşasa da, Eleven’a olan derin sevgisi ve arkadaşlarına duyduğu sonsuz sadakatle ekibi her zaman bir arada tutmayı başaran, cesur ve birleştirici bir güçtür.
+                </p>
+            </div>
+
+            <table class="kunye-tablosu">
+                <tr>
+                    <td class="etiket">Gerçek Adı:</td>
+                    <td>Steve Harrington</td>
+                </tr>
+                <tr>
+                    <td class="etiket">Takma Adı:</td>
+                    <td>King Steve,The Babysitter</td>
+                </tr>
+                <tr>
+                    <td class="etiket">Yetenekler:</td>
+                    <td>Koruyucu,Dayanıklı</td>
+                </tr>
+                <tr>
+                    <td class="etiket">Doğum Yılı:</td>
+                    <td>1966</td>
+                </tr>
+                <tr>
+                    <td class="etiket">İlişki Durumu:</td>
+                    <td>Bekar</td>
+                </tr>
+            </table>
+
+            <center>
+                <a href="HomePage.html" class="geri-don-btn">🏠 Ana Sayfaya Dön</a>
+            </center>
+        </div>
+    </div>
+
+    <script>
+        function muzikKontrol() {
+            var ses = document.getElementById("muzik");
+            var buton = document.getElementById("muzikBtn");
+
+            if (ses.paused) {
+                ses.play();
+                buton.innerHTML = "🔇 Durdur";
+                buton.style.color = "white";
+                buton.style.borderColor = "white";
+                buton.style.boxShadow = "0 0 15px white";
+            } else {
+                ses.pause();
+                buton.innerHTML = "🎵 Müziği Oynat";
+                buton.style.color = "#ff0000";
+                buton.style.borderColor = "#ff0000";
+                buton.style.boxShadow = "0 0 15px #8b0000";
+            }
+        }
+        document.getElementById("muzik").volume = 0.5;
+    </script>
+</body>
+</html>

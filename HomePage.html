@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stranger Things Fan Page</title>
+    <style>
+        ul {
+            display: flex;          
+            justify-content: center;
+            flex-wrap: wrap;        
+            gap: 30px;             
+            list-style-type: none;  
+            padding: 0;             
+        }
+
+        li {
+            text-align: center;     
+        }
+
+        .profil-foto:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 0 20px crimson; 
+        }
+        
+        a { text-decoration: none; } 
+        
+        body {
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='%23DC143C' stroke='white' stroke-width='2' d='M2 2l11 2.9-4.5 2.1 4.3 9.4-3.1 1.4-4.3-9.4-2.5 5.2z'/%3E%3C/svg%3E"), auto;
+        }
+        .footer-rating {
+            background-color: rgba(0, 0, 0, 0.85); 
+            border-top: 2px solid crimson;
+            padding: 30px;
+            text-align: center;
+            margin-top: 50px;
+            box-shadow: 0 -5px 20px rgba(220, 20, 60, 0.3);
+        }
+
+        .yildiz {
+            font-size: 50px; 
+            cursor: pointer;
+            filter: grayscale(100%); 
+            transition: all 0.2s; 
+            margin: 0 5px;
+            display: inline-block;
+        }
+
+        
+        .yildiz.sari {
+            filter: grayscale(0%); 
+            text-shadow: 0 0 15px gold; 
+            animation: parla 0.4s ease-in-out; 
+        }
+
+        @keyframes parla {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.4); }
+            100% { transform: scale(1); }
+        }
+
+        #sonuc {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ce0202; 
+            margin-top: 15px;
+            min-height: 30px;
+            text-shadow: 1px 1px 2px black;
+        }
+
+        .profil-foto {
+            width: 150px;       
+            height: 150px;      
+            border-radius: 50%; 
+            object-fit: cover;  
+            border: 4px solid red; 
+            box-shadow: 0 0 15px red; 
+            margin: 10px; 
+            transition: transform 0.3s; 
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-image: url(4k.jpg);
+max-width: 1260px;
+width: 100%;
+margin: 0 auto;
+min-height: 100vh;
+background-size: cover;
+background-attachment: fixed;">
+
+<audio id="muzik" src="strangerthings.mp3" loop></audio>
+
+<button id="muzikBtn" onclick="muzikKontrol()" style="
+    position: fixed; 
+    top: 20px; 
+    right: 20px; 
+    z-index: 9999; 
+    cursor: pointer; 
+    background-color: rgba(0, 0, 0, 0.8); 
+    color: #ff0000; 
+    border: 2px solid #ff0000; 
+    padding: 10px 20px; 
+    border-radius: 30px; 
+    font-family: 'Creepster', cursive; 
+    font-size: 16px; 
+    box-shadow: 0 0 15px #8b1000;
+    transition: 0.3s;">
+    🎵 Müzik Oynat
+</button>
+
+<script>
+    function muzikKontrol() {
+        var ses = document.getElementById("muzik");
+        var buton = document.getElementById("muzikBtn");
+
+        if (ses.paused) {
+            ses.play();
+            buton.innerHTML = "🔇 Durdur";
+            buton.style.color = "white";
+            buton.style.borderColor = "white";
+            buton.style.boxShadow = "0 0 15px white";
+        } else {
+            ses.pause();
+            buton.innerHTML = "🎵 Müzigi Oynat";
+            buton.style.color = "#ff0000";
+            buton.style.borderColor = "#ff0000";
+            buton.style.boxShadow = "0 0 15px #8b0000";
+        }
+    }
+    
+    document.getElementById("muzik").volume = 0.5;
+</script>
+
+    <header>
+        <center>
+            <h1 style="font-family: 'Creepster', cursive; color: #ff0000; font-size: 80px; text-shadow: 0 0 15px #8b0000; letter-spacing: 5px; margin-bottom: 0;">
+                STRANGER THINGS
+            </h1>
+            <p style="font-size: 18px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: rgb(255, 255, 255); margin-top: 5px;">Hawkins, Indiana'ya Hoş Geldiniz. Burada tuhaf şeyler oluyor...</p>
+        </center>
+    </header>
+    
+    <hr color="white" width="80%">
+    
+    <header>
+        <center>
+            <p style="font-size: 30px;font-family: 'Creepster'; color: rgb(255, 255, 255);">HİKAYE</p>
+        </center>
+    </header>
+
+    <div style="
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.9), rgba(40, 40, 40, 0.9));
+    border-left: 5px solid crimson;
+    padding: 20px 30px;
+    border-radius: 0 15px 15px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 15px;
+    line-height: 1.7;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);">
+        <p style="margin: 0; text-align: justify;">
+            1980'lerin klasik bilimkurgu ve korku filmlerine bir saygı duruşu niteliğinde olan Stranger Things, 1983 yılında ABD'nin Indiana eyaletindeki kurgusal Hawkins kasabasında dört yakın arkadaşın oynadığı bir oyun sonrası Will’in gizemli bir şekilde kaybolmasıyla başlar. Bu kayboluş, telekinetik güçlere sahip Eleven adında gizemli bir kızın ortaya çıkması ve kasabanın hemen altında yatan karanlık, soğuk ve canavarlarla dolu "Baş Aşağı Dünya" isimli paralel evrenin keşfedilmesiyle derinleşir.
+        </p>
+    </div>
+
+    <header>
+        <center>
+            <p style="font-size: 30px;font-family: 'Creepster'; color: #ffffff;">KARAKTERLER</p>
+        </center>
+    </header>
+    
+    <ul>
+        <li>
+            <a href="Eleven.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Eleven (El)</strong>
+                <br>
+                <img src="resim/el.jpg" class="profil-foto" alt="Eleven">
+            </a>
+        </li>
+        <li>
+            <a href="Vecna.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Vecna(Henry)</strong>
+                <br>
+                <img src="resim/hvecna.webp" class="profil-foto" alt="Vecna">
+            </a>
+        </li>
+        <li>
+            <a href="Mike.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Mike Wheeler</strong>
+                <br>
+                <img src="resim/mike.jpg" class="profil-foto" alt="Mike">
+            </a>
+        </li>
+        <li>
+            <a href="Dustin.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Dustin Henderson</strong>
+                <br>
+                <img src="resim/dustin.jpg" class="profil-foto" alt="Dustin">
+            </a>
+        </li>
+        <li>
+            <a href="Steve.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Steve Harrington</strong>
+                <br>
+                <img src="resim/steve.jpg" class="profil-foto" alt="Steve">
+            </a>
+        </li>
+        <li>
+            <a href="Lucas.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Lucas Sinclair</strong>
+                <br>
+                <img src="resim/lucas.jpg" class="profil-foto" alt="Lucas">
+            </a>
+        </li>
+        <li>
+            <a href="Will.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Will Byers</strong>
+                <br>
+                <img src="resim/will.jpg" class="profil-foto" alt="Will">
+            </a>
+        </li>
+        <li>
+            <a href="Max.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Max Mayfield</strong>
+                <br>
+                <img src="resim/max.jpg" class="profil-foto" alt="Max">
+            </a>
+        </li>
+        <li>
+            <a href="Hopper.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Jim Hopper</strong>
+                <br>
+                <img src="resim/hopper.jpg" class="profil-foto" alt="Hopper">
+            </a>
+        </li>
+        <li>
+            <a href="Nancy.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Nancy Wheeler</strong>
+                <br>
+                <img src="resim/nancy.jpg" class="profil-foto" alt="Nancy">
+            </a>
+        </li>
+        <li>
+            <a href="Robin.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Robin Buckley</strong>
+                <br>
+                <img src="resim/robin.jpg" class="profil-foto" alt="Robin">
+            </a>
+        </li>
+        <li>
+            <a href="Jonathan.html">
+                <strong style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: crimson; background-color: rgba(0, 0, 0, 0.7)">Jonathan Byers</strong>
+                <br>
+                <img src="resim/jonathan.jpg" class="profil-foto" alt="Jonathan">
+            </a>
+        </li>
+    </ul>
+    <br>
+    <header>
+        <center>
+            <a href="https://www.netflix.com/"
+            style="color: #ddff00">
+            <p style="font-size: 20px;font-family: 'VT323', monospace; color: rgb(255, 255, 255);">Buraya</a> tıklayarak dizinin yayınlandığı siteye gidebilirsiniz.</p>
+
+            <p style="font-size: 20px;font-family: 'VT323', monospace; color: rgb(255, 255, 255);">Bizi puanlamayı unutmayın! Upside Down'da görüşürüz.</p>
+        </center>
+    </header>
+    <div class="footer-rating">
+        <p style="color: white; margin-bottom: 10px;"></p>
+        
+        <div>
+            <span class="yildiz" data-sayi="1">🧇</span>
+            <span class="yildiz" data-sayi="2">🧇</span>
+            <span class="yildiz" data-sayi="3">🧇</span>
+            <span class="yildiz" data-sayi="4">🧇</span>
+            <span class="yildiz" data-sayi="5">🧇</span>
+        </div>
+
+        <p id="sonuc">Puanınızı bekliyoruz...</p>
+    </div>
+    <script>
+        const yildizlar = document.querySelectorAll('.yildiz');
+        const sonucKutusu = document.getElementById('sonuc');
+
+        yildizlar.forEach(function(yildiz) {
+            yildiz.addEventListener('click', function() {
+                const secilenPuan = yildiz.getAttribute('data-sayi');
+
+                yildizlar.forEach(function(s) {
+                    s.classList.remove('sari');
+                    if(s.getAttribute('data-sayi') <= secilenPuan) {
+                        s.classList.add('sari');
+                    }
+                });
+
+                mesajGoster(secilenPuan);
+            });
+        });
+
+        function mesajGoster(puan) {
+            if (puan == 1) sonucKutusu.innerText = "Bir Demogorgon saldırısı kadar kötü mü? 😱";
+            else if (puan == 2) sonucKutusu.innerText = "Daha iyisi olabilirdi... Upside Down gibi. 🤔";
+            else if (puan == 3) sonucKutusu.innerText = "Fena değil, Hawkins standartlarında. 🙂";
+            else if (puan == 4) sonucKutusu.innerText = "Harika! Steve'in saçları kadar güzel. 😎";
+            else if (puan == 5) sonucKutusu.innerText = "Mükemmel! Eleven'ın güçleri kadar etkileyici! 🔥";
+        }
+    </script>
+    <header>
+        <center>
+    <p style="font-size: 15px;font-family: 'VT323', monospace; color: rgb(255, 255, 255);">Bu site Hawkins Laboratuvarında kodlanmıştır.</p>
+    </center>
+    </header>
+</body>
+</html>

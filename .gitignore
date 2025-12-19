@@ -1,0 +1,27 @@
+# Build / binaries
+*.exe
+*.out
+*.o
+*.obj
+/build/
+/bin/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temp
+*.tmp
+
+# Node (if added later)
+node_modules/
+
+# Optional: ignore large media if you prefer not to upload
+# resim/
