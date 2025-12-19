@@ -18,6 +18,7 @@ Basit bir "Stranger Things" fan sayfası içeren HTML projeleri.
   git commit -m "Initial commit"
   ```
 - GitHub'a yüklemek için repo oluşturup uzak ekleyin ve `git push` komutunu çalıştırın.
+- Repo linki: https://github.com/eylulucar1/BIL101Project
 
 ---
 
