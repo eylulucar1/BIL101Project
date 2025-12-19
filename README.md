@@ -20,6 +20,18 @@ Basit bir "Stranger Things" fan sayfası içeren HTML projeleri.
 - GitHub'a yüklemek için repo oluşturup uzak ekleyin ve `git push` komutunu çalıştırın.
 - Repo linki: https://github.com/eylulucar1/BIL101Project
 
+## Proje Hakkında
+Basit bir "Stranger Things" fan sayfasıdır — HTML ve görseller içerir. Siteyi yerelde görüntülemek için `HomePage.html` dosyasını tarayıcıda açabilirsiniz.
+
+## Canlı Demo (opsiyonel)
+Bu projeyi ücretsiz olarak GitHub Pages ile yayınlayabilirim. Onay verirsen Pages ayarlarını yapılandırıp siteyi yayına alırım.
+
+## Yazar
+Eyluleylemucar — eyluleylemucar8@gmail.com
+
+## Lisans
+MIT (isteğe bağlı — istersen ben LICENSE ekleyebilirim)
+
 ---
 
-_Yardım istersen repo oluşturma ve push adımlarında sana yardım edebilirim ve istersen bunları ben şu anda uygulayayım. Ancak GitHub'a push etmek için hesabına erişim izni veya `gh` CLI yetkisi gerekecek._
+_Repo zaten oluşturuldu ve main branch GitHub'a pushlandı. İstersen şimdi GitHub Pages'i etkinleştirip siteyi yayına alabilirim._
